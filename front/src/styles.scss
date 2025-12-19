@@ -1,0 +1,37 @@
+
+@use 'variables' as vars;
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+* {
+    font-family: "Google Sans Flex", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "wdth" 100, "GRAD" 0, "ROND" 0;
+    scroll-behavior: smooth;
+    transition-duration: 100ms;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul, li {
+    text-decoration: none;
+}
+
+button, select, input[type="submit"], input[type="reset"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+body {
+    background-color: vars.$black;
+    padding: 0;
+    margin: 0;
+}

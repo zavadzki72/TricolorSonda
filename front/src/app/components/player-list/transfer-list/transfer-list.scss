@@ -1,0 +1,123 @@
+@use 'variables' as vars;
+
+:host {
+    display: block;
+}
+
+:host ::ng-deep .transfer-list {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+:host ::ng-deep .transfer-list-form {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+
+    max-width: 75rem;
+    margin: 0 auto 1.5rem;
+
+    mat-form-field {
+        min-width: 5rem;
+
+        .mat-mdc-text-field-wrapper {
+            background: transparent;
+            padding: 0;
+            border: 1px solid vars.$dark_gray;
+            border-radius: .8rem;
+        }
+
+        .mat-mdc-form-field-flex {
+            height: 2.5rem;
+            background: vars.$light_black;
+            border-radius: 0.625rem;
+            padding: 0 0.875rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .mat-mdc-form-field-infix {
+            padding: 0;
+            min-height: unset;
+            display: flex;
+            align-items: center;
+        }
+
+        input,
+        .mat-mdc-select-value {
+            color: vars.$white;
+            font-size: 0.875rem;
+        }
+
+        .mat-mdc-floating-label {
+            color: vars.$gray;
+        }
+
+        .mat-mdc-select-arrow {
+            color: vars.$gray;
+        }
+
+        .mdc-line-ripple {
+            display: none;
+        }
+    }
+
+    .player-input {
+        min-width: 20rem;
+        color: vars.$gray;
+    }
+}
+
+:host ::ng-deep .dark-panel {
+    background: vars.$light_black !important;
+    border-radius: 0.625rem !important;
+    margin-top: 0.5rem;
+
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.6) !important;
+
+    mat-option {
+        color: vars.$white;
+
+        &:hover {
+            background: vars.$dark_gray !important;
+        }
+    }
+
+    .mat-pseudo-checkbox {
+        --mat-minimal-pseudo-checkbox-selected-checkmark-color: vars.$yellow;
+    }
+}
+
+@media (max-width: 768px) {
+    :host ::ng-deep .transfer-list {
+        padding: 0 1rem;
+    }
+
+    :host ::ng-deep .transfer-list-form {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        margin-bottom: 2rem;
+
+        mat-form-field {
+            width: 100%;
+            min-width: unset;
+            
+            &.player-input {
+                min-width: unset; 
+                width: 100%;
+            }
+
+            .mat-mdc-form-field-flex {
+                height: 3rem; 
+            }
+        }
+    }
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}

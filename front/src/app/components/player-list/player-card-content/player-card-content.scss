@@ -1,0 +1,197 @@
+@use 'variables' as vars;
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 33%;
+    background-color: vars.$light_black;
+    padding: 0rem 2rem;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-top: 1px solid vars.$dark_gray;
+    border-right: 1px solid vars.$dark_gray;
+    border-left: 1px solid vars.$dark_gray;
+
+    h2 {
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        gap: .7rem;
+        padding-left: 1rem;
+
+        div {
+            display: flex;
+            align-items: center;
+            padding: 0rem .5rem;
+            background-color: vars.$light_black_2;
+            border: 1px solid vars.$gray;
+            border-radius: .8rem;
+            font-size: .7rem;
+            padding: .35rem .5rem;
+            cursor: pointer;
+
+            span {
+                padding-right: .3rem;
+                font-size: 1.3rem;
+            }
+        }
+        
+        .notification_icon {
+            cursor: pointer;
+            padding: .3rem;
+            align-items: center;
+
+            span {
+                padding: 0;
+                font-weight: 700;
+                color: vars.$red;
+            }
+        }
+    }
+}
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 33%;
+    background-color: vars.$light_black;
+    padding: 2rem;
+    border: 1px solid vars.$dark_gray;
+
+    .card-img {
+        width: 4rem;
+        height: 4rem;
+        border: 2px double vars.$gray;
+        border-radius: 10rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    span {
+        padding-top: .6rem;
+        font-size: .8rem;
+        color: vars.$gray;
+        font-weight: 500;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .arrow {
+        color: vars.$yellow;
+        font-size: 1.5rem;
+    }
+
+    .position {
+        padding-top: .3rem;
+        color: vars.$gray;
+        font-weight: 300;
+    }
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 33%;
+    background-color: vars.$red;
+    padding: 0rem 2rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    border-bottom: 1px solid vars.$red;
+    border-right: 1px solid vars.$red;
+    border-left: 1px solid vars.$red;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    
+    span {
+        padding: 1rem;
+        font-weight: 550;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-header, 
+    .card-content, 
+    .card-footer {
+        max-width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-header {
+        padding: 0.8rem 1.2rem;
+        flex-direction: row;
+        
+        h2 {
+            font-size: 1rem;
+        }
+
+        .buttons {
+            gap: 0.5rem;
+            padding-left: 0.5rem;
+
+            div {
+                padding: 0.3rem 0.4rem;
+                
+                span {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    .card-content {
+        padding: 1.5rem 1rem;
+        
+        .card-img {
+            width: 3.5rem; 
+            height: 3.5rem;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        span {
+            font-size: 0.75rem;
+        }
+        
+        .arrow {
+            font-size: 1.3rem;
+        }
+    }
+
+    .card-footer {
+        span {
+            font-size: 0.9rem;
+            padding: 0.8rem;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .card-header {
+        h2 { 
+            font-size: 1rem;
+        }
+    }
+    
+    .card-content {
+        gap: 0.5rem;
+    }
+}

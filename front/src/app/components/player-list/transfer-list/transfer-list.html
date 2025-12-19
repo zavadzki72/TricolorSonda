@@ -1,0 +1,45 @@
+<div class="transfer-list">
+    <form class="transfer-list-form" [formGroup]="form">
+        <mat-form-field appearance="fill" class="player-input">
+            <input matInput placeholder="Nome do jogador" formControlName="playerName" />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-select formControlName="status" multiple placeholder="Status" panelClass="dark-panel">
+                <mat-select-trigger>
+                    Status
+                    <span *ngIf="form.value.status?.length">
+                        ({{ form.value.status?.length ?? 0 }})
+                    </span>
+                </mat-select-trigger>
+
+                <mat-option [value]="1">Rumor</mat-option>
+                <mat-option [value]="2">Negócio Fechado</mat-option>
+                <mat-option [value]="3">Não Concretizado</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-select formControlName="movement" multiple placeholder="Movimento" panelClass="dark-panel">
+                <mat-option [value]="1">Chegando</mat-option>
+                <mat-option [value]="2">Saindo</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-select formControlName="type" multiple placeholder="Tipo" panelClass="dark-panel">
+                <mat-option [value]="1">Compra</mat-option>
+                <mat-option [value]="2">Venda</mat-option>
+                <mat-option [value]="3">Empréstimo</mat-option>
+                <mat-option [value]="4">Renovação</mat-option>
+                <mat-option [value]="5">Rescisão</mat-option>
+                <mat-option [value]="6">Fim de Contrato</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+    <div class="card-content">
+        <app-player-card>
+            <app-player-card-content card-content />
+        </app-player-card>
+    </div>
+</div>

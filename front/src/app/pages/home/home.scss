@@ -1,0 +1,136 @@
+@use 'variables' as vars;
+
+.s-banner {
+    background-color: vars.$light_black;
+}
+
+.banner {
+    max-width: 1200px;
+    margin: 0px auto;
+    
+    display: flex;
+    justify-content: space-between;
+
+    .banner-rigth {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        justify-content: start;
+        word-spacing: .3rem;
+        width: 50%;
+        
+        h1 {
+            font-size: 3rem;
+            line-height: .5rem;
+            color: vars.$white;
+
+            p {
+                font-weight: 600;
+                margin-bottom: 0;
+            }
+
+            span {
+                font-weight: 600;
+                color: vars.$light_red;
+            }
+        }
+
+        .banner-description {
+            color: vars.$gray;
+            font-size: 1.3rem;
+            margin: 0;
+            padding-bottom: 5rem;
+            word-spacing: .1rem;
+            overflow-wrap: break-word;
+        }
+
+        button {
+            color: vars.$white;
+            background-color: vars.$dark_red;
+            border-radius: .3rem;
+            padding: .5rem;
+            margin-bottom: 5rem;
+        }
+    }
+
+    .banner-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        img {
+            padding-top: 1rem;
+            width: 25rem;
+            height: 20rem;
+        }
+
+        .text-1 {
+            color: vars.$white;
+            padding-bottom: .2rem;
+            font-style: italic;
+            font-weight: 200;
+            font-size: .8rem;
+            
+            span {
+                color: vars.$light_red;
+                font-weight: 600;
+            }
+        }
+
+        .text-2 {
+            color: vars.$yellow;
+            font-style: italic;
+            padding-bottom: .5rem;
+            font-size: .7rem;
+            font-weight: 200;
+        }
+
+        .text-3 {
+            color: vars.$gray;
+            font-style: italic;
+            padding-bottom: .3rem;
+            font-size: .6rem;
+            font-weight: 200;
+        }
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 1rem;
+
+        .banner-rigth {
+            width: 100%;
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                line-height: .5rem;
+                font-size: 1.8rem;
+            }
+
+            .banner-description {
+                padding-top: 1rem;
+                padding-bottom: 2rem;
+            }
+
+            button {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .banner-left {
+            width: 100%;
+            
+            img {
+                width: 100%;
+                max-width: 20rem;
+                height: auto;
+            }
+        }
+    }
+}
