@@ -80,3 +80,4 @@ Thumbs.db
 *.md
 *.txt
 *.json
+!README.md
