@@ -1,0 +1,76 @@
+## Ignore ASP.NET files ##
+## User-specific files ##
+.vs
+.vscode
+.idea
+
+## User-specific configuration files ##
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+## Build Folders ##
+bin/
+obj/
+
+## ASP.NET Publish ##
+publish/
+
+## User-specific Files ##
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# Windows Installer files for Visual Studio
+.vs2019/
+
+# User-specific files
+.vs/
+.idea/
+
+# JetBrains Rider
+.idea/
+
+# Windows Installer files
+Thumbs.db
+ehthumbs.db
+
+# .NET Core global tool cache
+.gotools/
+
+# npm and Yarn logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# VS Code settings
+.vscode/
+
+# Windows Installer cache files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# .NET temporary folders
+*/bin/
+*/obj/
+
+# Package folders (NuGet, etc)
+.nuget/
+Packages/
+
+# .NET Core SDK/Runtime
+dotnet-watcher/
+
+# Build results from Visual Studio for Mac
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Package folders
+*.nupkg
