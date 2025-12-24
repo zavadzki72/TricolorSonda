@@ -14,11 +14,13 @@ namespace TricolorSonda.Api.Services
 
         public async Task<PaginatedTransferResponse> Create(CreateTransfer request)
         {
+            // @TODO: Fazer isso antes de subir
             throw new NotImplementedException();
         }
 
         public async Task<PaginatedTransferResponse> GetPaginated(GetPaginatedTransfer request)
         {
+            // @TODO: Fazer isso antes de subir
             throw new NotImplementedException();
         }
     }
