@@ -1,0 +1,20 @@
+# zava-review - Configuração para projeto .NET
+
+languages:
+  - csharp
+
+rules:
+  cleanCode: true
+  solid: true
+  performance: true
+  security: true
+  readability: true
+
+ai:
+  provider: gemini
+  model: gemini-2.5-flash
+  
+customPrompt: |
+  Este é um projeto .NET Core.
+  Avalie padrões DDD, injeção de dependência, 
+  tratamento de exceções e validação de inputs.
