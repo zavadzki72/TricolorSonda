@@ -12,16 +12,14 @@ namespace TricolorSonda.Api.Services
             _context = context;
         }
 
-        public async Task<PaginatedTransferResponse> Create(CreateTransfer request)
+        public Task<PaginatedTransferResponse> Create(CreateTransfer request)
         {
-            // @TODO: Fazer isso antes de subir
-            throw new NotImplementedException();
+            throw new NotImplementedException("Transfer creation not yet implemented.");
         }
 
-        public async Task<PaginatedTransferResponse> GetPaginated(GetPaginatedTransfer request)
+        public Task<PaginatedTransferResponse> GetPaginated(GetPaginatedTransfer request)
         {
-            // @TODO: Fazer isso antes de subir
-            throw new NotImplementedException();
+            throw new NotImplementedException("Paginated transfers not yet implemented.");
         }
     }
 }
